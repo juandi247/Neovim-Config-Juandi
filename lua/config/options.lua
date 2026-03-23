@@ -21,3 +21,12 @@ vim.keymap.set("n", "<leader>o", "za", { desc = "Toggle fold" })
 
 --hover autoamtico
 vim.opt.updatetime = 2000
+
+--LSP config para errores
+vim.diagnostic.config({
+  virtual_text = true,      -- muestra el error al final de la línea
+  signs = true,             -- muestra símbolo en el margen izquierdo
+  underline = true,         -- subraya el código con error
+  update_in_insert = false, -- solo muestra errores fuera de insert mode
+  severity_sort = true,     -- errores primero, warnings después
+})
