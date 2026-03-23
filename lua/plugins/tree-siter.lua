@@ -1,7 +1,7 @@
 -- plugins/treesitter.lua
 return {
   "nvim-treesitter/nvim-treesitter",
-  branch = "main",
+  tag = "v0.9.3",
   build = ":TSUpdate",
   event = { "BufReadPost", "BufNewFile" },
   cmd = { "TSUpdate", "TSInstall", "TSUninstall" },
@@ -31,6 +31,6 @@ return {
     indent = { enable = true },
   },
   config = function(_, opts)
-    require("nvim-treesitter").setup(opts)
+    require("nvim-treesitter.configs").setup(opts)
   end,
 }
