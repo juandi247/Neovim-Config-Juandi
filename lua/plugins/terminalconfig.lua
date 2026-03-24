@@ -9,7 +9,7 @@ return {
     })
 
     -- abrir/cerrar terminal
-    vim.keymap.set({ "n", "t" }, "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
+    vim.keymap.set({ "n"}, "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
 
     -- salir del modo insert de la terminal
     vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Normal mode en terminal" })
